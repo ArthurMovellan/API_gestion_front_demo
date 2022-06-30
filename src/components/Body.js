@@ -16,8 +16,8 @@ const Body = () => {
 
     return (
         <>
-            {customers ? <DropdownCustomer title={"Customers"} entities={customers} setItems={setItems}></DropdownCustomer> : null}
-            {items ? <CustomTable titles={["ID","Nom","Quantité"]} dataTable={items}></CustomTable> : null}
+            {customers ? <DropdownCustomer title={"Customers"} customers={customers} setItems={setItems}></DropdownCustomer> : null}
+            {items ? <CustomTable titles={["Nom","Quantité"]} dataTable={items}></CustomTable> : null}
         </>
     )
 }

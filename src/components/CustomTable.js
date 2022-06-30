@@ -12,10 +12,10 @@ const CustomTable = (props) => {
                 </thead>
 
                 <tbody>
-                    {props.dataTable.map(row => {
+                    {props.dataTable[0][0].map(row => {
                         return (
                             <tr>
-                                {row.map(data => {
+                                {Object.values(row).map(data => {
                                     return <td>{data}</td>
                                 })}
                             </tr>)

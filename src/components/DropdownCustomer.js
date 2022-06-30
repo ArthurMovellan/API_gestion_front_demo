@@ -10,9 +10,9 @@ const DropdownCustomer = (props) => {
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu>
-                    {props.entities.map(entity => {
-                        return (<Dropdown.Item onClick={() => RetrieveItems.getItems("test", entity).then(results => {props.setItems(results)})}>
-                                    {CustomerService.getCustomerFirstLastName(entity)}
+                    {props.customers.map(customer => {
+                        return (<Dropdown.Item onClick={() => RetrieveItems.getItems("get_items_by_customer", customer).then(results => {props.setItems(results)})}>
+                                    {customer}
                                 </Dropdown.Item>)
                     })}
                 </Dropdown.Menu>
