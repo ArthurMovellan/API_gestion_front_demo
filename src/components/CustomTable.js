@@ -12,7 +12,7 @@ const CustomTable = (props) => {
                 </thead>
 
                 <tbody>
-                    {props.dataTable[0][0].map(row => {
+                    {props.dataTable.map(row => {
                         return (
                             <tr>
                                 {Object.values(row).map(data => {
